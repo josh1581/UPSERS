@@ -8,10 +8,10 @@
 import Foundation
 
 struct CallOut {
-    var firstName: String
-    var lastName: String
-    var empID: Int
-    var homeSort: String
-    var callOutDate: NSDate
-    var assignedLocation: String
+    var firstName: String = ""
+    var lastName: String = ""
+    var empID: Int = 0
+    var homeSort: String = ""
+    var callOutDate: String = ""
+    var assignedLocation: String = ""
 }

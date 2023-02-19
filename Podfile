@@ -6,9 +6,9 @@ target 'UPSERS' do
   use_frameworks!
 
   # Pods for UPSERS
+
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
-
 
 end

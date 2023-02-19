@@ -8,11 +8,14 @@
 import Foundation
  
 struct ExtraWork {
-    var firstName: String
-    var lastName: String
-    var phoneNumber: Int
-    var extraWorkDate: NSDate
-    var homeSort: String
-    var workRequested: [String]
+    var firstName: String = ""
+    var lastName: String = ""
+    var phoneNumber: Int = 0
+    var hireDate: String = ""
+    var extraWorkDate: String = ""
+    var homeSort: String = ""
+    var workRequested: String = ""
+    var workLocation: String = ""
+    var extraWorkSort: String = ""
     
 }

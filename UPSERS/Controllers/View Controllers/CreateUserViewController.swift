@@ -20,6 +20,7 @@ class CreateUserViewController: UIViewController {
     var employeeID = 0
     
     
+    
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -30,16 +31,10 @@ class CreateUserViewController: UIViewController {
     //MARK: - Outlets
     
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var employeeIDTextField: UITextField!    
+    @IBOutlet weak var employeeIDTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
-    
-    
-    
-    
     // MARK: - Navigation
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -57,21 +52,23 @@ class CreateUserViewController: UIViewController {
             if let error = error {
                 print(error)
             } else {
-                let db = Firestore.firestore()
                 guard let employeeID = employeeID else {return}
-                db.collection("users").addDocument(data: ["email":email, "employeeID":employeeID, "uid": result!.user.uid]) { (error) in
-                    if error != nil {
-                        print(error)
-                    }
-                }
+                self.addUserDoc(email: email, employeeID: employeeID)
+                
                 self.goToHome()
-                
-                
-                
-                
             }
         }
     }
+    func addUserDoc(email: String, employeeID: Int){
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let userDoc = Firestore.firestore().collection("users").document(uid)
+        userDoc.setData([
+            "email" : email,
+            "employeeID" : employeeID
+            
+        ])
+    }
+    
     
     func goToHome() {
         
@@ -79,6 +76,6 @@ class CreateUserViewController: UIViewController {
         storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
         
         view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()  
+        view.window?.makeKeyAndVisible()
     }
 }

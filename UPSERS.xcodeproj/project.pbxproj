@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0BC9F123C626025376B4A366 /* Pods_UPSERS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8281A9E4EDC4D0974FB6C4F /* Pods_UPSERS.framework */; };
+		9A2EDE86297331C0000DB1C9 /* UserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2EDE85297331C0000DB1C9 /* UserModelController.swift */; };
+		9A36C4172981D6C800A46989 /* ExtraWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A36C4162981D6C800A46989 /* ExtraWorkController.swift */; };
 		9A498AC8289D886200D895D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498AC7289D886200D895D2 /* HomeViewController.swift */; };
 		9A498ACA289ED14400D895D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498AC9289ED14400D895D2 /* Constants.swift */; };
 		9A498ACC289ED77900D895D2 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498ACB289ED77900D895D2 /* Employee.swift */; };
@@ -20,12 +22,14 @@
 		9AAF43EF277F9FAB0044CC19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43EE277F9FAB0044CC19 /* LoginViewController.swift */; };
 		9AAF43F3277F9FD60044CC19 /* CallOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43F2277F9FD60044CC19 /* CallOutViewController.swift */; };
 		9AAF43F5277F9FE90044CC19 /* ExtraWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43F4277F9FE90044CC19 /* ExtraWorkViewController.swift */; };
-		9AAF43F7277FA0140044CC19 /* MyExtraWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43F6277FA0140044CC19 /* MyExtraWorkViewController.swift */; };
-		9AAF43F9277FA0250044CC19 /* MyCallOutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43F8277FA0250044CC19 /* MyCallOutsViewController.swift */; };
 		9AAF43FB277FA0610044CC19 /* CallOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43FA277FA0610044CC19 /* CallOut.swift */; };
 		9AAF43FD277FA06E0044CC19 /* ExtraWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43FC277FA06E0044CC19 /* ExtraWork.swift */; };
 		9AAF43FF277FC6AC0044CC19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43FE277FC6AC0044CC19 /* User.swift */; };
 		9AC2347E2891C984002541B8 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2347D2891C984002541B8 /* UserController.swift */; };
+		9AC3E1932986EFEC00C2121B /* UserExtraWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */; };
+		9AC3E1952986F00500C2121B /* MyCallOutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1942986F00500C2121B /* MyCallOutsTableViewCell.swift */; };
+		9AC3E19B2986FACB00C2121B /* UserExtraWorkModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E19A2986FACB00C2121B /* UserExtraWorkModelController.swift */; };
+		9AC3E19D2986FAEB00C2121B /* UserCallOutModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E19C2986FAEB00C2121B /* UserCallOutModelController.swift */; };
 		9ADB07AE28AED98900D0364F /* CallOutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADB07AD28AED98900D0364F /* CallOutController.swift */; };
 		9AEE865227CEDB5500AE2DC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AEE865127CEDB5500AE2DC8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -33,6 +37,8 @@
 /* Begin PBXFileReference section */
 		107E2F5E96308D3B5F05F450 /* Pods-UPSERS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPSERS.debug.xcconfig"; path = "Target Support Files/Pods-UPSERS/Pods-UPSERS.debug.xcconfig"; sourceTree = "<group>"; };
 		43E6BAFD4FD79BA4C01FBC36 /* Pods-UPSERS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPSERS.release.xcconfig"; path = "Target Support Files/Pods-UPSERS/Pods-UPSERS.release.xcconfig"; sourceTree = "<group>"; };
+		9A2EDE85297331C0000DB1C9 /* UserModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelController.swift; sourceTree = "<group>"; };
+		9A36C4162981D6C800A46989 /* ExtraWorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraWorkController.swift; sourceTree = "<group>"; };
 		9A498AC7289D886200D895D2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A498AC9289ED14400D895D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9A498ACB289ED77900D895D2 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
@@ -47,12 +53,14 @@
 		9AAF43EE277F9FAB0044CC19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9AAF43F2277F9FD60044CC19 /* CallOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallOutViewController.swift; sourceTree = "<group>"; };
 		9AAF43F4277F9FE90044CC19 /* ExtraWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraWorkViewController.swift; sourceTree = "<group>"; };
-		9AAF43F6277FA0140044CC19 /* MyExtraWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtraWorkViewController.swift; sourceTree = "<group>"; };
-		9AAF43F8277FA0250044CC19 /* MyCallOutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCallOutsViewController.swift; sourceTree = "<group>"; };
 		9AAF43FA277FA0610044CC19 /* CallOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallOut.swift; sourceTree = "<group>"; };
 		9AAF43FC277FA06E0044CC19 /* ExtraWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraWork.swift; sourceTree = "<group>"; };
 		9AAF43FE277FC6AC0044CC19 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9AC2347D2891C984002541B8 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkTableViewCell.swift; sourceTree = "<group>"; };
+		9AC3E1942986F00500C2121B /* MyCallOutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCallOutsTableViewCell.swift; sourceTree = "<group>"; };
+		9AC3E19A2986FACB00C2121B /* UserExtraWorkModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkModelController.swift; sourceTree = "<group>"; };
+		9AC3E19C2986FAEB00C2121B /* UserCallOutModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCallOutModelController.swift; sourceTree = "<group>"; };
 		9ADB07AD28AED98900D0364F /* CallOutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallOutController.swift; sourceTree = "<group>"; };
 		9AEE865127CEDB5500AE2DC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8281A9E4EDC4D0974FB6C4F /* Pods_UPSERS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPSERS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +186,8 @@
 		9AAF43E9277F9EE70044CC19 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */,
+				9AC3E1942986F00500C2121B /* MyCallOutsTableViewCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -187,6 +197,10 @@
 			children = (
 				9AC2347D2891C984002541B8 /* UserController.swift */,
 				9ADB07AD28AED98900D0364F /* CallOutController.swift */,
+				9A2EDE85297331C0000DB1C9 /* UserModelController.swift */,
+				9A36C4162981D6C800A46989 /* ExtraWorkController.swift */,
+				9AC3E19A2986FACB00C2121B /* UserExtraWorkModelController.swift */,
+				9AC3E19C2986FAEB00C2121B /* UserCallOutModelController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -199,8 +213,6 @@
 				9A498AC7289D886200D895D2 /* HomeViewController.swift */,
 				9AAF43F2277F9FD60044CC19 /* CallOutViewController.swift */,
 				9AAF43F4277F9FE90044CC19 /* ExtraWorkViewController.swift */,
-				9AAF43F6277FA0140044CC19 /* MyExtraWorkViewController.swift */,
-				9AAF43F8277FA0250044CC19 /* MyCallOutsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -216,7 +228,7 @@
 				9AAF43C9277F9E4A0044CC19 /* Sources */,
 				9AAF43CA277F9E4A0044CC19 /* Frameworks */,
 				9AAF43CB277F9E4A0044CC19 /* Resources */,
-				325BF13441B3D25434E30D0C /* [CP] Embed Pods Frameworks */,
+				6FD2F7961DC0A0E072EC8152 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,23 +287,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		325BF13441B3D25434E30D0C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UPSERS/Pods-UPSERS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UPSERS/Pods-UPSERS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UPSERS/Pods-UPSERS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6DCD6426BA0AD8BAC935C952 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,6 +309,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6FD2F7961DC0A0E072EC8152 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UPSERS/Pods-UPSERS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UPSERS/Pods-UPSERS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UPSERS/Pods-UPSERS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -321,22 +333,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC3E19B2986FACB00C2121B /* UserExtraWorkModelController.swift in Sources */,
 				9AAF43FD277FA06E0044CC19 /* ExtraWork.swift in Sources */,
+				9AC3E19D2986FAEB00C2121B /* UserCallOutModelController.swift in Sources */,
+				9A36C4172981D6C800A46989 /* ExtraWorkController.swift in Sources */,
 				9AAF43EF277F9FAB0044CC19 /* LoginViewController.swift in Sources */,
 				9AAF43F3277F9FD60044CC19 /* CallOutViewController.swift in Sources */,
+				9AC3E1932986EFEC00C2121B /* UserExtraWorkTableViewCell.swift in Sources */,
 				9AC2347E2891C984002541B8 /* UserController.swift in Sources */,
 				9AAF43F5277F9FE90044CC19 /* ExtraWorkViewController.swift in Sources */,
+				9AC3E1952986F00500C2121B /* MyCallOutsTableViewCell.swift in Sources */,
 				9ADB07AE28AED98900D0364F /* CallOutController.swift in Sources */,
 				9AAF43D1277F9E4A0044CC19 /* AppDelegate.swift in Sources */,
 				9A498ACA289ED14400D895D2 /* Constants.swift in Sources */,
-				9AAF43F9277FA0250044CC19 /* MyCallOutsViewController.swift in Sources */,
 				9A498ACC289ED77900D895D2 /* Employee.swift in Sources */,
+				9A2EDE86297331C0000DB1C9 /* UserModelController.swift in Sources */,
 				9AAF43D3277F9E4A0044CC19 /* SceneDelegate.swift in Sources */,
 				9AAF43FB277FA0610044CC19 /* CallOut.swift in Sources */,
 				9A498AC8289D886200D895D2 /* HomeViewController.swift in Sources */,
 				9AAF43FF277FC6AC0044CC19 /* User.swift in Sources */,
 				9AAF43ED277F9F8F0044CC19 /* CreateUserViewController.swift in Sources */,
-				9AAF43F7277FA0140044CC19 /* MyExtraWorkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
