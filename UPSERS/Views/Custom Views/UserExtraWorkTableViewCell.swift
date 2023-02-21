@@ -8,7 +8,7 @@
 import UIKit
 
 class UserExtraWorkTableViewCell: UITableViewCell {
-    
+    /*
     //MARK: - Properties
     
     var userExtraWork: UserExtraWork? {
@@ -33,5 +33,5 @@ class UserExtraWorkTableViewCell: UITableViewCell {
         
     }
 
-
+*/
 }//end of class

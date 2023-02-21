@@ -17,12 +17,7 @@ class UserController {
     
     static let shared = UserController()
     
-    var employeeID: Int = 0 {
-        didSet{
-            print(user.self?.employeeID)
-            fetchEmployeeInfo(employeeID: employeeID)
-        }
-    }
+    var employeeID: Int = 0 
     
     //MARK: - Properties
     
@@ -39,9 +34,7 @@ class UserController {
         Firestore.firestore().collection("users").document("\(Auth.auth().currentUser?.uid ?? "")").getDocument { [weak self] document, error in
             if let document = document {
                 let employeeID = document["employeeID"] as? Int ?? 0
-                
-                
-                print(employeeID)
+               
                 self?.user?.employeeID = employeeID
                 //UserController.shared.user?.employeeID = employeeID
                 //guard let user = user else {return}
@@ -57,7 +50,7 @@ class UserController {
     
     //This method sets the remainder of the user object.
     
-    func fetchEmployeeInfo(employeeID: Int)  {
+    func fetchEmployeeInfo(employeeID: Int) async {
         Firestore.firestore().collection("employees").document("\(employeeID)").getDocument { [weak self]document, error in
             if let document = document{
                 let email = document["email"] as? String ?? ""

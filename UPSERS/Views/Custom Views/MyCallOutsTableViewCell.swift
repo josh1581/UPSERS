@@ -9,7 +9,7 @@ import UIKit
 
 class UserCallOutsTableViewCell: UITableViewCell {
     //MARK: - Properties
-    
+    /*
     var userCallOut: UserCallOut? {
         didSet {
             updateViews()
@@ -29,6 +29,6 @@ class UserCallOutsTableViewCell: UITableViewCell {
         userCallOutHomeSortLabel.text = userCallOut.homeSort
     }
     
-    
+  */
     
 }

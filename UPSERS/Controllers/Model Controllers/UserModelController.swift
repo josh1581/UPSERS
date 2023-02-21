@@ -13,7 +13,7 @@ import FirebaseFirestore
 
 class UserModelController {
     //MARK: - SOT
-    
+ /*
     var user: User?
     
     //MARK: - Properties
@@ -116,7 +116,7 @@ class UserModelController {
         }
     }
     
-    */
+    
     
     func setUserInfo() {
         Task {

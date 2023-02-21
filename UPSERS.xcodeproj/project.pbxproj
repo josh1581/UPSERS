@@ -28,8 +28,8 @@
 		9AC2347E2891C984002541B8 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2347D2891C984002541B8 /* UserController.swift */; };
 		9AC3E1932986EFEC00C2121B /* UserExtraWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */; };
 		9AC3E1952986F00500C2121B /* MyCallOutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1942986F00500C2121B /* MyCallOutsTableViewCell.swift */; };
-		9AC3E19B2986FACB00C2121B /* UserExtraWorkModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E19A2986FACB00C2121B /* UserExtraWorkModelController.swift */; };
-		9AC3E19D2986FAEB00C2121B /* UserCallOutModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E19C2986FAEB00C2121B /* UserCallOutModelController.swift */; };
+		9AC3E19F29A5483100C2121B /* UserCalloutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E19E29A5483100C2121B /* UserCalloutsTableViewController.swift */; };
+		9AC3E1A129A5486200C2121B /* UserExtraWorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1A029A5486200C2121B /* UserExtraWorkTableViewController.swift */; };
 		9ADB07AE28AED98900D0364F /* CallOutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADB07AD28AED98900D0364F /* CallOutController.swift */; };
 		9AEE865227CEDB5500AE2DC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AEE865127CEDB5500AE2DC8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -59,8 +59,8 @@
 		9AC2347D2891C984002541B8 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkTableViewCell.swift; sourceTree = "<group>"; };
 		9AC3E1942986F00500C2121B /* MyCallOutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCallOutsTableViewCell.swift; sourceTree = "<group>"; };
-		9AC3E19A2986FACB00C2121B /* UserExtraWorkModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkModelController.swift; sourceTree = "<group>"; };
-		9AC3E19C2986FAEB00C2121B /* UserCallOutModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCallOutModelController.swift; sourceTree = "<group>"; };
+		9AC3E19E29A5483100C2121B /* UserCalloutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCalloutsTableViewController.swift; sourceTree = "<group>"; };
+		9AC3E1A029A5486200C2121B /* UserExtraWorkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkTableViewController.swift; sourceTree = "<group>"; };
 		9ADB07AD28AED98900D0364F /* CallOutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallOutController.swift; sourceTree = "<group>"; };
 		9AEE865127CEDB5500AE2DC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8281A9E4EDC4D0974FB6C4F /* Pods_UPSERS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPSERS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,8 +199,6 @@
 				9ADB07AD28AED98900D0364F /* CallOutController.swift */,
 				9A2EDE85297331C0000DB1C9 /* UserModelController.swift */,
 				9A36C4162981D6C800A46989 /* ExtraWorkController.swift */,
-				9AC3E19A2986FACB00C2121B /* UserExtraWorkModelController.swift */,
-				9AC3E19C2986FAEB00C2121B /* UserCallOutModelController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -213,6 +211,8 @@
 				9A498AC7289D886200D895D2 /* HomeViewController.swift */,
 				9AAF43F2277F9FD60044CC19 /* CallOutViewController.swift */,
 				9AAF43F4277F9FE90044CC19 /* ExtraWorkViewController.swift */,
+				9AC3E19E29A5483100C2121B /* UserCalloutsTableViewController.swift */,
+				9AC3E1A029A5486200C2121B /* UserExtraWorkTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -333,9 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AC3E19B2986FACB00C2121B /* UserExtraWorkModelController.swift in Sources */,
+				9AC3E19F29A5483100C2121B /* UserCalloutsTableViewController.swift in Sources */,
 				9AAF43FD277FA06E0044CC19 /* ExtraWork.swift in Sources */,
-				9AC3E19D2986FAEB00C2121B /* UserCallOutModelController.swift in Sources */,
 				9A36C4172981D6C800A46989 /* ExtraWorkController.swift in Sources */,
 				9AAF43EF277F9FAB0044CC19 /* LoginViewController.swift in Sources */,
 				9AAF43F3277F9FD60044CC19 /* CallOutViewController.swift in Sources */,
@@ -352,6 +351,7 @@
 				9AAF43FB277FA0610044CC19 /* CallOut.swift in Sources */,
 				9A498AC8289D886200D895D2 /* HomeViewController.swift in Sources */,
 				9AAF43FF277FC6AC0044CC19 /* User.swift in Sources */,
+				9AC3E1A129A5486200C2121B /* UserExtraWorkTableViewController.swift in Sources */,
 				9AAF43ED277F9F8F0044CC19 /* CreateUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

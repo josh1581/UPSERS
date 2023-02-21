@@ -15,7 +15,7 @@ class CallOutViewController: UIViewController {
     
     //MARK: - Properties
     
-    var user = User(employeeID: 123456, email: "josh.hoyle@outlook.com", firstName: "Josh", lastName: "Hoyle", phoneNumber: 5033307800, hireDate: "10/13/2021", workLocation: "POROR-9729", district: "Portland", assignedLocation: "SD4", homeSort: "TWI M-F")
+    var user: User?
     
     var callOut: CallOut = CallOut()
     
@@ -28,9 +28,7 @@ class CallOutViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        print(user.lastName)
-        print(user.firstName)
-        print(user.workLocation)
+        
         super.viewDidLoad()
     }
     
@@ -50,7 +48,8 @@ class CallOutViewController: UIViewController {
     
     
     @IBAction func callOutDatePickerChanged(_ sender: Any) {
-        
+        callOutDate = callOutDatePicker.date
+        //callOutDatePicker.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
         
         
         print(callOutDatePicker.date)
@@ -75,12 +74,15 @@ class CallOutViewController: UIViewController {
     
     //MARK: - Functions
     
-    func saveCallOutToCorporateDB(firstName: String, lastName: String, empID: Int, homeSort: String, assignedLocation: String, callOutDate: String) {
-        let newCallOutRef = db.collection("corporate").document(self.user.workLocation).collection("callOuts").document()
+    func saveCallOutToDB(firstName: String, lastName: String, employeeID: Int, homeSort: String, assignedLocation: String, callOutDate: String) {
+       
+        guard let user = user else {return}
+        let newCallOutRef =
+        db.collection("corporate").document(user.workLocation).collection("callOuts").document()
         newCallOutRef.setData([
             "assignedLocation" : assignedLocation,
             "callOutDate" : callOutDate,
-            "empID" : empID,
+            "employeeID" : "\(employeeID)",
             "firstName" : firstName,
             "lastName" : lastName,
             "homeSort" : homeSort,
@@ -92,15 +94,18 @@ class CallOutViewController: UIViewController {
     }
     
     func callOutAC() {
+        guard let user = user else {return}
         let alertController = UIAlertController(title: " Please Confirm CallOut", message: "You are calling out on \(callOutDate)", preferredStyle: .alert)
         let doneAction = UIAlertAction(title: "Confirm", style: .default) { [self] (_) in
-            let firstName = self.user.firstName
-            let lastName = self.user.lastName
-            let empID = self.user.employeeID
-            let homeSort = self.user.homeSort
-            let assignedLocation = self.user.assignedLocation
+            
+            
+            let firstName = user.firstName
+            let lastName = user.lastName
+            let employeeID = user.employeeID
+            let homeSort = user.homeSort
+            let assignedLocation = user.assignedLocation
             let callOutDate = "\(callOutDate)"
-            self.saveCallOutToCorporateDB(firstName: firstName, lastName: lastName, empID: empID, homeSort: homeSort, assignedLocation: assignedLocation, callOutDate: callOutDate)
+            self.saveCallOutToDB(firstName: firstName, lastName: lastName, employeeID: employeeID, homeSort: homeSort, assignedLocation: assignedLocation, callOutDate: callOutDate)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(doneAction)
@@ -119,94 +124,6 @@ class CallOutViewController: UIViewController {
     }
     
     
-    /*
-     func fetchEmployeeID() async {
-     guard let uid = self.uid else {return}
-     Firestore.firestore().collection("users").document(uid).getDocument { [self] document, error in
-     if let document = document {
-     let employeeID = document["employeeID"] as? Int ?? 0
-     self.employeeID = employeeID
-     
-     print(employeeID)
-     print(self.employeeID)
-     
-     }
-     }
-     }
-     
-     
-     func FetchEmployeeInfo(employeeID: Int) {
-     let employeeIDString = "\(employeeID)"
-     Firestore.firestore().collection("Employees").document(employeeIDString).getDocument {  document, error in
-     if let document = document{
-     let email = document["email"] as? String ?? ""
-     let firstName = document["firstName"] as? String ?? ""
-     let lastName = document["lastName"] as? String ?? ""
-     let phoneNumber = document["phoneNumber"] as? Int ?? 0
-     let hireDate = document["hireDate"] as? String ?? ""
-     
-     let workLocation = document["workLocation"] as? String ?? ""
-     let assignedLocation = document["assignedLocation"] as? String ?? ""
-     let homeSort = document["homeSort"] as? String ?? ""
-     
-     self.user.email = email
-     self.user.firstName = firstName
-     self.user.lastName = lastName
-     self.user.phoneNumber = phoneNumber
-     self.user.hireDate = hireDate
-     self.user.workLocation = workLocation
-     self.user.assignedLocation = assignedLocation
-     self.user.homeSort = homeSort
-     
-     
-     self.user.employeeID = employeeID
-     print(homeSort)
-     print(self.user.homeSort)
-     
-     }
-     }
-     }
-     func fetchEmployeeInfoOld(employeeID: Int) {
-     print(employeeID)
-     let employeeIDString = "\(employeeID)"
-     print(employeeIDString)
-     let docRef = db.collection("employees").document(employeeIDString)
-     
-     docRef.getDocument { [self] (document, error) in
-     if let document = document, document.exists {
-     let data = document.data()
-     if let data = data{
-     
-     let email = data["email"] as? String ?? ""
-     let firstName = data["firstName"] as? String ?? ""
-     let lastName = data["lastName"] as? String   ?? ""
-     let phoneNumber = data["phoneNumber"] as? Int ?? 0
-     let hireDate = data["hireDate"] as? String ?? ""
-     
-     let workLocation = data["workLocation"] as? String ?? ""
-     let assignedLocation = data["assignedLocation"] as? String ?? ""
-     let homeSort = data["homeSort"] as? String ?? ""
-     
-     print(homeSort)
-     
-     self.user.email = email
-     self.user.firstName = firstName
-     self.user.lastName = lastName
-     self.user.phoneNumber = phoneNumber
-     self.user.hireDate = hireDate
-     self.user.workLocation = workLocation
-     self.user.assignedLocation = assignedLocation
-     self.user.homeSort = homeSort
-     
-     
-     //self.user.employeeID = employeeID
-     print(homeSort)
-     print(self.user.homeSort)
-     }
-     }
-     }
-     }
-     
-     */
+    
     
 }

@@ -18,6 +18,9 @@ class CreateUserViewController: UIViewController {
     var email = ""
     var password = ""
     var employeeID = 0
+    var user: User?
+    
+
     
     
     
@@ -53,6 +56,9 @@ class CreateUserViewController: UIViewController {
                 print(error)
             } else {
                 guard let employeeID = employeeID else {return}
+               
+                    UserController.shared.user?.employeeID = employeeID
+                    
                 self.addUserDoc(email: email, employeeID: employeeID)
                 
                 self.goToHome()
@@ -67,7 +73,7 @@ class CreateUserViewController: UIViewController {
             "employeeID" : employeeID
             
         ])
-    }
+            }
     
     
     func goToHome() {
@@ -77,5 +83,6 @@ class CreateUserViewController: UIViewController {
         
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
+        
     }
 }

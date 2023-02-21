@@ -9,6 +9,20 @@ import UIKit
 
 class ExtraWorkViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    //MARK: - Properties
+    
+    var user: User?
+    var pickerDataSource: [String] = ["ALDOR-9739 PRE", "ALDOR-9739 DAY","ALDOR-9739 TWI", "ALDOR-9739 NIT", "POROR-9729 PRE", "POROR-9729 DAY" ,"POROR-9729 TWI", "POROR-9729 NIT", "HILOR-9712 PRE", "HILOR-9712 TWI", "PDXAP-NIT"]
+    
+    
+    //MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.sortPIckerView.dataSource = self
+        self.sortPIckerView.delegate = self
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -23,19 +37,7 @@ class ExtraWorkViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     
-    //MARK: - Properties
     
-    
-    var pickerDataSource: [String] = ["ALDOR-9739 PRE", "ALDOR-9739 DAY","ALDOR-9739 TWI", "ALDOR-9739 NIT", "POROR-9729 PRE", "POROR-9729 DAY" ,"POROR-9729 TWI", "POROR-9729 NIT", "HILOR-9712 PRE", "HILOR-9712 TWI", "PDXAP-NIT"]
-    
-    
-    //MARK: - Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.sortPIckerView.dataSource = self
-        self.sortPIckerView.delegate = self
-    }
     
     //MARK: - Outlets
     

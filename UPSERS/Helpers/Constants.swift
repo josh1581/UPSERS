@@ -12,7 +12,7 @@ struct Constants {
         static let homeViewController = "HomeVC"
         static let callOutViewController = "CallOutVC"
         static let extraWorkViewController = "ExtraWorkVC"
-        static let userCalloutsViewController = "UserCallOutsVC"
-        static let userExtraWorkViewController = "UserExtraWorkVC"
+        static let userCalloutsTableViewController = "UserCallOutsVC"
+        static let userExtraWorkTableViewController = "UserExtraWorkVC"
     }
 }
