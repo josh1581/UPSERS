@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         Task {
-           await fetchEmployeeID()
+            await fetchEmployeeID()
         }
         super.viewDidLoad()
         
@@ -48,25 +48,6 @@ class HomeViewController: UIViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-
-        if segue.identifier == Constants.Storyboard.callOutViewController {
-            let destinationVC = segue.destination as! CallOutViewController
-            
-            
-           
-            
-            destinationVC.user = user
-            
-        }
-        
-        else if segue.identifier == Constants.Storyboard.extraWorkViewController {
-            let destinationVC = segue.destination as? ExtraWorkViewController
-        }
-        else if segue.identifier == Constants.Storyboard.userExtraWorkTableViewController{
-            let destinationVC = segue.destination as? UserExtraWorkTableViewController
-        }
-        
     }
     
     /*
@@ -94,7 +75,7 @@ class HomeViewController: UIViewController {
      */
     //MARK: - Actions
     
-    //Delete all of these actions since they are handled via segues in Storyboard or are they needed to pass data?
+    
     
     @IBAction func callOutButtonTapped(_ sender: Any) {
         let callOutViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.callOutViewController) as? CallOutViewController
@@ -104,6 +85,10 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func viewCallOutsButtonTapped(_ sender: Any) {
+        let userCallOutTableViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.userCalloutsTableViewController) as? UserCalloutsTableViewController
+        userCallOutTableViewController?.user = user
+        view.window?.rootViewController = userCallOutTableViewController
+        view.window?.makeKeyAndVisible()
         
     }
     @IBAction func extraWorkButtonTapped(_ sender: Any) {
@@ -113,6 +98,11 @@ class HomeViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     @IBAction func viewExtraWorkButtonTapped(_ sender: Any) {
+        let userExtraWorkTableViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.userExtraWorkTableViewController) as? UserExtraWorkTableViewController
+        userExtraWorkTableViewController?.user = user
+        view.window?.rootViewController = userExtraWorkTableViewController
+        view.window?.makeKeyAndVisible()
+        
     }
     
     

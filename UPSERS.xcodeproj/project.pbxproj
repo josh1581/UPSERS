@@ -27,7 +27,7 @@
 		9AAF43FF277FC6AC0044CC19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43FE277FC6AC0044CC19 /* User.swift */; };
 		9AC2347E2891C984002541B8 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2347D2891C984002541B8 /* UserController.swift */; };
 		9AC3E1932986EFEC00C2121B /* UserExtraWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */; };
-		9AC3E1952986F00500C2121B /* MyCallOutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1942986F00500C2121B /* MyCallOutsTableViewCell.swift */; };
+		9AC3E1952986F00500C2121B /* UserCallOutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1942986F00500C2121B /* UserCallOutsTableViewCell.swift */; };
 		9AC3E19F29A5483100C2121B /* UserCalloutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E19E29A5483100C2121B /* UserCalloutsTableViewController.swift */; };
 		9AC3E1A129A5486200C2121B /* UserExtraWorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1A029A5486200C2121B /* UserExtraWorkTableViewController.swift */; };
 		9ADB07AE28AED98900D0364F /* CallOutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADB07AD28AED98900D0364F /* CallOutController.swift */; };
@@ -58,7 +58,7 @@
 		9AAF43FE277FC6AC0044CC19 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9AC2347D2891C984002541B8 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkTableViewCell.swift; sourceTree = "<group>"; };
-		9AC3E1942986F00500C2121B /* MyCallOutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCallOutsTableViewCell.swift; sourceTree = "<group>"; };
+		9AC3E1942986F00500C2121B /* UserCallOutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCallOutsTableViewCell.swift; sourceTree = "<group>"; };
 		9AC3E19E29A5483100C2121B /* UserCalloutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCalloutsTableViewController.swift; sourceTree = "<group>"; };
 		9AC3E1A029A5486200C2121B /* UserExtraWorkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkTableViewController.swift; sourceTree = "<group>"; };
 		9ADB07AD28AED98900D0364F /* CallOutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallOutController.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */,
-				9AC3E1942986F00500C2121B /* MyCallOutsTableViewCell.swift */,
+				9AC3E1942986F00500C2121B /* UserCallOutsTableViewCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -341,7 +341,7 @@
 				9AC3E1932986EFEC00C2121B /* UserExtraWorkTableViewCell.swift in Sources */,
 				9AC2347E2891C984002541B8 /* UserController.swift in Sources */,
 				9AAF43F5277F9FE90044CC19 /* ExtraWorkViewController.swift in Sources */,
-				9AC3E1952986F00500C2121B /* MyCallOutsTableViewCell.swift in Sources */,
+				9AC3E1952986F00500C2121B /* UserCallOutsTableViewCell.swift in Sources */,
 				9ADB07AE28AED98900D0364F /* CallOutController.swift in Sources */,
 				9AAF43D1277F9E4A0044CC19 /* AppDelegate.swift in Sources */,
 				9A498ACA289ED14400D895D2 /* Constants.swift in Sources */,

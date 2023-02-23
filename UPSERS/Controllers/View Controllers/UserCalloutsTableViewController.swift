@@ -6,84 +6,83 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+
 
 class UserCalloutsTableViewController: UITableViewController {
-
+    
+    //MARK: - Properties
+    
+    var user: User?
+    var callOut: CallOut?
+    var callOuts: [CallOut] = []
+    let db = Firestore.firestore()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return callOuts.count
     }
-
-    /*
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCallOutsCell", for: indexPath)
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    
+   
+    //MARK: - Functions
+    
+    func fetchCallOuts(employeeID: Int) {
+        guard let user = user else {return}
+        db.collection("corporate").document(user.workLocation).collection("callOuts").whereField("employeeID", isEqualTo: user.employeeID).getDocuments { QuerySnapshot, error in
+            if let error = error {
+                print("Error getting documents: \(error)")
+            } else {
+                guard let documents = QuerySnapshot?.documents else {
+                    print("No Documents")
+                    return
+                }
+                let callout = documents.map { QueryDocumentSnapshot -> CallOut in
+                    let data = QueryDocumentSnapshot.data()
+                    let assignedLocation = data["assignedLocation"] as? String ?? ""
+                    let callOutDate = data["callOutDate"] as? String ?? ""
+                    let employeeID = data["employeeID"] as? Int ?? 0
+                    let firstName = data["firstName"] as? String ?? ""
+                    let lastName = data["lastName"] as? String ?? ""
+                    let homeSort = data["homeSort"] as? String ?? ""
+                    self.callOut?.assignedLocation = assignedLocation
+                    self.callOut?.callOutDate = callOutDate
+                    self.callOut?.firstName = firstName
+                    self.callOut?.lastName = lastName
+                    self.callOut?.homeSort = homeSort
+                    guard let callOut = callOut else {return}
+                    callOuts.append(callOut)
+                    print(callOuts)
+                }
+            }
+        }
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
-
+    
+       
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    
 }
