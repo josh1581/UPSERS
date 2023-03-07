@@ -125,7 +125,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userExtraWorkCell" id="pec-Dz-sST" customClass="MyExtraWorkTableViewCell" customModule="UPSERS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pec-Dz-sST" id="rnI-6h-Rcj">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pec-Dz-sST" id="rnI-6h-Rcj" customClass="UserExtraWorkTableViewCell" customModule="UPSERS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -146,8 +146,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="extraWorkDateLabel" destination="xyC-5k-c9z" id="W6F-v6-mOP"/>
-                                    <outlet property="extraWorkSortLabel" destination="DAM-M2-riP" id="xkx-L8-WfI"/>
+                                    <outlet property="extraWorkDateLabel" destination="xyC-5k-c9z" id="NYe-Wq-qn1"/>
+                                    <outlet property="extraWorkSortLabel" destination="DAM-M2-riP" id="gDk-SM-3em"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -278,7 +278,6 @@
                     <connections>
                         <outlet property="extraWorkDatePicker" destination="Zww-1v-Do5" id="S2L-gS-i72"/>
                         <outlet property="sortPIckerView" destination="J9h-WJ-lsG" id="zKB-a2-QkP"/>
-                        <outlet property="sortPickerSelected" destination="J9h-WJ-lsG" id="FBr-xQ-ytN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkb-8w-SH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -503,14 +502,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(date)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yO-p7-PXg">
-                                            <rect key="frame" x="20" y="-1" width="81" height="44"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(date)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yO-p7-PXg">
+                                            <rect key="frame" x="20" y="-1" width="187" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(homeSort)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nm-NF-axw">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(homeSort)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nm-NF-axw">
                                             <rect key="frame" x="307" y="-1" width="87" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -520,6 +519,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="userCallOutDateLabel" destination="9yO-p7-PXg" id="ic8-ca-Ncf"/>
                                     <outlet property="userCallOutHomeSortLabel" destination="6Nm-NF-axw" id="LqB-Wd-qRi"/>
                                 </connections>
                             </tableViewCell>

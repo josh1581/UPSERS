@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BC9F123C626025376B4A366 /* Pods_UPSERS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8281A9E4EDC4D0974FB6C4F /* Pods_UPSERS.framework */; };
-		9A2EDE86297331C0000DB1C9 /* UserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2EDE85297331C0000DB1C9 /* UserModelController.swift */; };
-		9A36C4172981D6C800A46989 /* ExtraWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A36C4162981D6C800A46989 /* ExtraWorkController.swift */; };
+		9A3B5DB129B2A7AA003D3060 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3B5DB029B2A7AA003D3060 /* FirebaseAnalytics */; };
+		9A3B5DB329B2A7AA003D3060 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3B5DB229B2A7AA003D3060 /* FirebaseAuth */; };
+		9A3B5DB529B2A7AA003D3060 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3B5DB429B2A7AA003D3060 /* FirebaseFirestore */; };
+		9A3B5DB729B2A7AA003D3060 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3B5DB629B2A7AA003D3060 /* FirebaseFirestoreSwift */; };
+		9A3B5DB929B7D0F3003D3060 /* UserExtraWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B5DB829B7D0F3003D3060 /* UserExtraWorkTableViewCell.swift */; };
+		9A3B5DBB29B7F0CC003D3060 /* ExtraWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3B5DBA29B7F0CC003D3060 /* ExtraWorkController.swift */; };
 		9A498AC8289D886200D895D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498AC7289D886200D895D2 /* HomeViewController.swift */; };
 		9A498ACA289ED14400D895D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498AC9289ED14400D895D2 /* Constants.swift */; };
-		9A498ACC289ED77900D895D2 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A498ACB289ED77900D895D2 /* Employee.swift */; };
 		9AAF43D1277F9E4A0044CC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43D0277F9E4A0044CC19 /* AppDelegate.swift */; };
 		9AAF43D3277F9E4A0044CC19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43D2277F9E4A0044CC19 /* SceneDelegate.swift */; };
 		9AAF43D8277F9E4A0044CC19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF43D6277F9E4A0044CC19 /* Main.storyboard */; };
@@ -26,7 +28,6 @@
 		9AAF43FD277FA06E0044CC19 /* ExtraWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43FC277FA06E0044CC19 /* ExtraWork.swift */; };
 		9AAF43FF277FC6AC0044CC19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF43FE277FC6AC0044CC19 /* User.swift */; };
 		9AC2347E2891C984002541B8 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC2347D2891C984002541B8 /* UserController.swift */; };
-		9AC3E1932986EFEC00C2121B /* UserExtraWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */; };
 		9AC3E1952986F00500C2121B /* UserCallOutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1942986F00500C2121B /* UserCallOutsTableViewCell.swift */; };
 		9AC3E19F29A5483100C2121B /* UserCalloutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E19E29A5483100C2121B /* UserCalloutsTableViewController.swift */; };
 		9AC3E1A129A5486200C2121B /* UserExtraWorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3E1A029A5486200C2121B /* UserExtraWorkTableViewController.swift */; };
@@ -35,13 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		107E2F5E96308D3B5F05F450 /* Pods-UPSERS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPSERS.debug.xcconfig"; path = "Target Support Files/Pods-UPSERS/Pods-UPSERS.debug.xcconfig"; sourceTree = "<group>"; };
-		43E6BAFD4FD79BA4C01FBC36 /* Pods-UPSERS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPSERS.release.xcconfig"; path = "Target Support Files/Pods-UPSERS/Pods-UPSERS.release.xcconfig"; sourceTree = "<group>"; };
-		9A2EDE85297331C0000DB1C9 /* UserModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelController.swift; sourceTree = "<group>"; };
-		9A36C4162981D6C800A46989 /* ExtraWorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraWorkController.swift; sourceTree = "<group>"; };
+		9A3B5DB829B7D0F3003D3060 /* UserExtraWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkTableViewCell.swift; sourceTree = "<group>"; };
+		9A3B5DBA29B7F0CC003D3060 /* ExtraWorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraWorkController.swift; sourceTree = "<group>"; };
 		9A498AC7289D886200D895D2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A498AC9289ED14400D895D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		9A498ACB289ED77900D895D2 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		9AAF43CD277F9E4A0044CC19 /* UPSERS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPSERS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF43D0277F9E4A0044CC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AAF43D2277F9E4A0044CC19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,13 +55,11 @@
 		9AAF43FC277FA06E0044CC19 /* ExtraWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraWork.swift; sourceTree = "<group>"; };
 		9AAF43FE277FC6AC0044CC19 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9AC2347D2891C984002541B8 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
-		9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkTableViewCell.swift; sourceTree = "<group>"; };
 		9AC3E1942986F00500C2121B /* UserCallOutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCallOutsTableViewCell.swift; sourceTree = "<group>"; };
 		9AC3E19E29A5483100C2121B /* UserCalloutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCalloutsTableViewController.swift; sourceTree = "<group>"; };
 		9AC3E1A029A5486200C2121B /* UserExtraWorkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtraWorkTableViewController.swift; sourceTree = "<group>"; };
 		9ADB07AD28AED98900D0364F /* CallOutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallOutController.swift; sourceTree = "<group>"; };
 		9AEE865127CEDB5500AE2DC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B8281A9E4EDC4D0974FB6C4F /* Pods_UPSERS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPSERS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +67,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BC9F123C626025376B4A366 /* Pods_UPSERS.framework in Frameworks */,
+				9A3B5DB129B2A7AA003D3060 /* FirebaseAnalytics in Frameworks */,
+				9A3B5DB329B2A7AA003D3060 /* FirebaseAuth in Frameworks */,
+				9A3B5DB529B2A7AA003D3060 /* FirebaseFirestore in Frameworks */,
+				9A3B5DB729B2A7AA003D3060 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,18 +80,8 @@
 		2304EC95A3E5F8ED487EAC4B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				107E2F5E96308D3B5F05F450 /* Pods-UPSERS.debug.xcconfig */,
-				43E6BAFD4FD79BA4C01FBC36 /* Pods-UPSERS.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		337F20797EFB986AB76749C4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B8281A9E4EDC4D0974FB6C4F /* Pods_UPSERS.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9A2B7FC62795FF4100B87C99 /* Helpers */ = {
@@ -109,7 +98,6 @@
 				9AAF43CF277F9E4A0044CC19 /* UPSERS */,
 				9AAF43CE277F9E4A0044CC19 /* Products */,
 				2304EC95A3E5F8ED487EAC4B /* Pods */,
-				337F20797EFB986AB76749C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,7 +157,6 @@
 				9AAF43FA277FA0610044CC19 /* CallOut.swift */,
 				9AAF43FC277FA06E0044CC19 /* ExtraWork.swift */,
 				9AAF43FE277FC6AC0044CC19 /* User.swift */,
-				9A498ACB289ED77900D895D2 /* Employee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,8 +173,8 @@
 		9AAF43E9277F9EE70044CC19 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				9AC3E1922986EFEC00C2121B /* UserExtraWorkTableViewCell.swift */,
 				9AC3E1942986F00500C2121B /* UserCallOutsTableViewCell.swift */,
+				9A3B5DB829B7D0F3003D3060 /* UserExtraWorkTableViewCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -197,8 +184,7 @@
 			children = (
 				9AC2347D2891C984002541B8 /* UserController.swift */,
 				9ADB07AD28AED98900D0364F /* CallOutController.swift */,
-				9A2EDE85297331C0000DB1C9 /* UserModelController.swift */,
-				9A36C4162981D6C800A46989 /* ExtraWorkController.swift */,
+				9A3B5DBA29B7F0CC003D3060 /* ExtraWorkController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -224,17 +210,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AAF43E1277F9E4E0044CC19 /* Build configuration list for PBXNativeTarget "UPSERS" */;
 			buildPhases = (
-				6DCD6426BA0AD8BAC935C952 /* [CP] Check Pods Manifest.lock */,
 				9AAF43C9277F9E4A0044CC19 /* Sources */,
 				9AAF43CA277F9E4A0044CC19 /* Frameworks */,
 				9AAF43CB277F9E4A0044CC19 /* Resources */,
-				6FD2F7961DC0A0E072EC8152 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = UPSERS;
+			packageProductDependencies = (
+				9A3B5DB029B2A7AA003D3060 /* FirebaseAnalytics */,
+				9A3B5DB229B2A7AA003D3060 /* FirebaseAuth */,
+				9A3B5DB429B2A7AA003D3060 /* FirebaseFirestore */,
+				9A3B5DB629B2A7AA003D3060 /* FirebaseFirestoreSwift */,
+			);
 			productName = UPSERS;
 			productReference = 9AAF43CD277F9E4A0044CC19 /* UPSERS.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +253,9 @@
 				Base,
 			);
 			mainGroup = 9AAF43C4277F9E490044CC19;
+			packageReferences = (
+				9A3B5DAF29B2A7AA003D3060 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9AAF43CE277F9E4A0044CC19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,67 +279,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		6DCD6426BA0AD8BAC935C952 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UPSERS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6FD2F7961DC0A0E072EC8152 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UPSERS/Pods-UPSERS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UPSERS/Pods-UPSERS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UPSERS/Pods-UPSERS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		9AAF43C9277F9E4A0044CC19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9AC3E19F29A5483100C2121B /* UserCalloutsTableViewController.swift in Sources */,
+				9A3B5DBB29B7F0CC003D3060 /* ExtraWorkController.swift in Sources */,
 				9AAF43FD277FA06E0044CC19 /* ExtraWork.swift in Sources */,
-				9A36C4172981D6C800A46989 /* ExtraWorkController.swift in Sources */,
+				9A3B5DB929B7D0F3003D3060 /* UserExtraWorkTableViewCell.swift in Sources */,
 				9AAF43EF277F9FAB0044CC19 /* LoginViewController.swift in Sources */,
 				9AAF43F3277F9FD60044CC19 /* CallOutViewController.swift in Sources */,
-				9AC3E1932986EFEC00C2121B /* UserExtraWorkTableViewCell.swift in Sources */,
 				9AC2347E2891C984002541B8 /* UserController.swift in Sources */,
 				9AAF43F5277F9FE90044CC19 /* ExtraWorkViewController.swift in Sources */,
 				9AC3E1952986F00500C2121B /* UserCallOutsTableViewCell.swift in Sources */,
 				9ADB07AE28AED98900D0364F /* CallOutController.swift in Sources */,
 				9AAF43D1277F9E4A0044CC19 /* AppDelegate.swift in Sources */,
 				9A498ACA289ED14400D895D2 /* Constants.swift in Sources */,
-				9A498ACC289ED77900D895D2 /* Employee.swift in Sources */,
-				9A2EDE86297331C0000DB1C9 /* UserModelController.swift in Sources */,
 				9AAF43D3277F9E4A0044CC19 /* SceneDelegate.swift in Sources */,
 				9AAF43FB277FA0610044CC19 /* CallOut.swift in Sources */,
 				9A498AC8289D886200D895D2 /* HomeViewController.swift in Sources */,
@@ -496,7 +445,6 @@
 		};
 		9AAF43E2277F9E4E0044CC19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 107E2F5E96308D3B5F05F450 /* Pods-UPSERS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,7 +473,6 @@
 		};
 		9AAF43E3277F9E4E0044CC19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43E6BAFD4FD79BA4C01FBC36 /* Pods-UPSERS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -574,6 +521,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A3B5DAF29B2A7AA003D3060 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A3B5DB029B2A7AA003D3060 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A3B5DAF29B2A7AA003D3060 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		9A3B5DB229B2A7AA003D3060 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A3B5DAF29B2A7AA003D3060 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9A3B5DB429B2A7AA003D3060 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A3B5DAF29B2A7AA003D3060 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		9A3B5DB629B2A7AA003D3060 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A3B5DAF29B2A7AA003D3060 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9AAF43C5277F9E490044CC19 /* Project object */;
 }

@@ -1,6 +1,0 @@
-framework module Pods_UPSERS {
-  umbrella header "Pods-UPSERS-umbrella.h"
-
-  export *
-  module * { export * }
-}

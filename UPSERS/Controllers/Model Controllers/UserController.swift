@@ -77,5 +77,5 @@ class UserController {
             }
         }
     }
-}//end of class*/
+}//end of class
 

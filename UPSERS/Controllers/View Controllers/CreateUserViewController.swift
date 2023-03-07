@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
@@ -19,8 +20,6 @@ class CreateUserViewController: UIViewController {
     var password = ""
     var employeeID = 0
     var user: User?
-    
-
     
     
     
@@ -56,9 +55,9 @@ class CreateUserViewController: UIViewController {
                 print(error)
             } else {
                 guard let employeeID = employeeID else {return}
-               
-                    UserController.shared.user?.employeeID = employeeID
-                    
+                
+                UserController.shared.user?.employeeID = employeeID
+                
                 self.addUserDoc(email: email, employeeID: employeeID)
                 
                 self.goToHome()
@@ -73,14 +72,11 @@ class CreateUserViewController: UIViewController {
             "employeeID" : employeeID
             
         ])
-            }
-    
+    }    
     
     func goToHome() {
-        
         let homeViewController =
         storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
         

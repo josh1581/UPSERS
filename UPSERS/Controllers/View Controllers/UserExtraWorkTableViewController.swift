@@ -18,7 +18,13 @@ class UserExtraWorkTableViewController: UITableViewController {
     var extraWorks: [ExtraWork] = []
     let db = Firestore.firestore()
     
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
+        guard let user = user else {return}
+        Task {
+            await fetchExtraWork(employeeID: user.employeeID)
+        }
         super.viewDidLoad()
         
     }
@@ -31,54 +37,42 @@ class UserExtraWorkTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "userExtraWorkCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userExtraWorkCell", for: indexPath) as? UserExtraWorkTableViewCell
+        let extraWork = extraWorks[indexPath.row]
+        cell?.extraWork = extraWork
+        return cell ?? UITableViewCell()
         
-        
-        
-        return cell
     }
     
     
     
     
-  //MARK: - Functions
+    //MARK: - Functions
     
-    func fetchExtraWork(employeeID: Int) {
+    func fetchExtraWork(employeeID: Int) async {
         guard let user = user else {return}
-        db.collection("corporate").document(user.workLocation).collection("extraWork").whereField("employeeID", isEqualTo: user.employeeID).getDocuments { querySnapshot, error in
+        db.collection("corporate").document(user.workLocation).collection("extraWork").whereField("employeeID", isEqualTo: user.employeeID).addSnapshotListener { querySnapshot, error in
             if let error = error {
-                print("Error getting documents: \(error)")
+                print("Error getting documents: \(error).")
+                
             } else {
                 guard let documents = querySnapshot?.documents else {
-                    print("No Documents")
+                    print("No Documents.")
                     return
                 }
-                let extaWork = documents.map { QueryDocumentSnapshot -> CallOut in
-                    let data = QueryDocumentSnapshot.data()
-                    let employeeID = data["employeeID"] as? Int ?? 0
-                    let extraWorkDate = data["extraWorkDate"] as? String ?? ""
-                    let extraWorkSort = data["extraWorkSort"] as? String ?? ""
-                    let firstName = data["firstName"] as? String ?? ""
-                    let hireDate = data["hireDate"] as? String ?? ""
-                    let homeSort = data["homeSort"] as? String ?? ""
-                    let lastName = data["lastName"] as? String ?? ""
-                    let phoneNumber = data["phoneNumber"] as? Int ?? 0
-                    let workLocation = data["workLocation"] as? String ?? ""
-                    let workRequested = data["workRequested"] as? String ?? ""
-                    self.extraWork?.employeeID = employeeID
-                    self.extraWork?.extraWorkDate = extraWorkDate
-                    self.extraWork?.firstName = firstName
-                    self.extraWork?.lastName = lastName
-                    self.extraWork?.homeSort = homeSort
-                    guard let extraWork = extraWork else {return}
-                    extraWorks.append(extraWork)
-                    print(extraWorks)
+                
+                self.extraWorks = documents.compactMap { queryDocumentSnapshot -> ExtraWork? in
+                    return try? queryDocumentSnapshot.data(as: ExtraWork.self)
                 }
+                print(self.extraWorks)
+                print(self.extraWorks.count)
+                self.tableView.reloadData()
+                
             }
         }
-        
     }
     
+   
     
     // MARK: - Navigation
     
@@ -89,4 +83,4 @@ class UserExtraWorkTableViewController: UITableViewController {
     }
     
     
-}
+}//end of class

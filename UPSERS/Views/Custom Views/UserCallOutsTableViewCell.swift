@@ -8,9 +8,10 @@
 import UIKit
 
 class UserCallOutsTableViewCell: UITableViewCell {
+    
     //MARK: - Properties
-    /*
-    var userCallOut: UserCallOut? {
+    
+    var callOut: CallOut? {
         didSet {
             updateViews()
         }
@@ -24,11 +25,10 @@ class UserCallOutsTableViewCell: UITableViewCell {
     //MARK: - Functions
     
     func updateViews() {
-        guard let userCallOut = userCallOut else {return}
-        userCallOutDateLabel.text = userCallOut.callOutDate
-        userCallOutHomeSortLabel.text = userCallOut.homeSort
+        guard let callOut = callOut else {return}
+        userCallOutDateLabel.text = callOut.callOutDate
+        userCallOutHomeSortLabel.text = callOut.homeSort
     }
+  
     
-  */
-    
-}
+}// end of class

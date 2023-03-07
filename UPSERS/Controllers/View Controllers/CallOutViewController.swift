@@ -17,11 +17,11 @@ class CallOutViewController: UIViewController {
     
     var user: User?
     
-    var callOut: CallOut = CallOut()
+    var callOut: CallOut?
     
-    var callOutDate: Date = Date()
+    var datePicker: String = ""
     let db = Firestore.firestore()
-    let dateFormatter = DateFormatter()
+    
     
     
     //MARK: - Lifecycle
@@ -48,23 +48,17 @@ class CallOutViewController: UIViewController {
     
     
     @IBAction func callOutDatePickerChanged(_ sender: Any) {
-        callOutDate = callOutDatePicker.date
-        //callOutDatePicker.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
-        
-        
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        let stringFromDate: String = dateFormatter.string(from: self.callOutDatePicker.date)
+        datePicker = stringFromDate
         print(callOutDatePicker.date)
-        
     }
     
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
-        dateFormatter.dateStyle = .short
-        //callOutDate.formatted(date: Date.FormatStyle.sho, time: <#T##Date.FormatStyle.TimeStyle#>)
-        // callOutDate = dateFormatter.date(from: "\(callOutDatePicker.date)") ?? Date()
-        print(callOutDate)
-        self.callOut.callOutDate = "\(callOutDate)"
+        print(datePicker)
         callOutAC()
-        
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
@@ -75,36 +69,30 @@ class CallOutViewController: UIViewController {
     //MARK: - Functions
     
     func saveCallOutToDB(firstName: String, lastName: String, employeeID: Int, homeSort: String, assignedLocation: String, callOutDate: String) {
-       
         guard let user = user else {return}
         let newCallOutRef =
         db.collection("corporate").document(user.workLocation).collection("callOuts").document()
         newCallOutRef.setData([
             "assignedLocation" : assignedLocation,
-            "callOutDate" : callOutDate,
-            "employeeID" : "\(employeeID)",
+            "callOutDate" : datePicker,
+            "employeeID" : employeeID,
             "firstName" : firstName,
             "lastName" : lastName,
             "homeSort" : homeSort,
         ])
     }
     
-    func saveToUserDB(){
-        
-    }
     
     func callOutAC() {
         guard let user = user else {return}
-        let alertController = UIAlertController(title: " Please Confirm CallOut", message: "You are calling out on \(callOutDate)", preferredStyle: .alert)
+        let alertController = UIAlertController(title: " Please Confirm CallOut", message: "You are calling out on \(datePicker)", preferredStyle: .alert)
         let doneAction = UIAlertAction(title: "Confirm", style: .default) { [self] (_) in
-            
-            
             let firstName = user.firstName
             let lastName = user.lastName
             let employeeID = user.employeeID
             let homeSort = user.homeSort
             let assignedLocation = user.assignedLocation
-            let callOutDate = "\(callOutDate)"
+            let callOutDate = datePicker
             self.saveCallOutToDB(firstName: firstName, lastName: lastName, employeeID: employeeID, homeSort: homeSort, assignedLocation: assignedLocation, callOutDate: callOutDate)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -117,13 +105,10 @@ class CallOutViewController: UIViewController {
     func goToHome() {
         
         let homeViewController =
-        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
+        storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController        
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }
     
     
-    
-    
-}
+} //end of class
