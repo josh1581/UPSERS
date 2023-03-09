@@ -53,6 +53,24 @@ class UserExtraWorkTableViewController: UITableViewController {
         guard let user = user else {return}
         db.collection("corporate").document(user.workLocation).collection("extraWork").whereField("employeeID", isEqualTo: user.employeeID).addSnapshotListener { querySnapshot, error in
             if let error = error {
+                print("Error getting documents: \(error)")
+                
+            } else {
+                guard let documents = querySnapshot?.documents else {
+                    print("No documents.")
+                    return
+                }
+                self.extraWorks = documents.compactMap { queryDocumentSnapshot -> ExtraWork? in
+                    return try? queryDocumentSnapshot.data(as: ExtraWork.self)
+                }
+            }
+        }
+    }
+    /*
+    func fetchExtraWork(employeeID: Int) async {
+        guard let user = user else {return}
+        db.collection("corporate").document(user.workLocation).collection("extraWork").whereField("employeeID", isEqualTo: user.employeeID).addSnapshotListener { querySnapshot, error in
+            if let error = error {
                 print("Error getting documents: \(error).")
                 
             } else {
@@ -72,7 +90,7 @@ class UserExtraWorkTableViewController: UITableViewController {
         }
     }
     
-   
+   */
     
     // MARK: - Navigation
     

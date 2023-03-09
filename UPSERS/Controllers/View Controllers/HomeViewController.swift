@@ -112,15 +112,18 @@ class HomeViewController: UIViewController {
                 let homeSort = document["homeSort"] as? String ?? ""
                 print(homeSort)
                 //guard let self.user = user else {return}
+                self?.user.assignedLocation = assignedLocation
                 self?.user.email = email
+                self?.user.firstName = firstName
+                self?.user.hireDate = hireDate
+                self?.user.homeSort = homeSort
                 self?.user.lastName = lastName
                 self?.user.phoneNumber = phoneNumber
-                self?.user.hireDate = hireDate
                 self?.user.workLocation = workLocation
-                self?.user.assignedLocation = assignedLocation
-                self?.user.homeSort = homeSort
                 self?.user.employeeID = employeeID
                 print(homeSort)
+                print(self?.user.hireDate)
+                print(self?.user.firstName)
                 print(self?.user.homeSort)
             }
         }
