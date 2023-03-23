@@ -55,6 +55,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func viewCallOutsButtonTapped(_ sender: Any) {
+        
         let userCallOutTableViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.userCalloutsTableViewController) as? UserCalloutsTableViewController
         userCallOutTableViewController?.user = user
         view.window?.rootViewController = userCallOutTableViewController
@@ -122,8 +123,7 @@ class HomeViewController: UIViewController {
                 self?.user.workLocation = workLocation
                 self?.user.employeeID = employeeID
                 print(homeSort)
-                print(self?.user.hireDate)
-                print(self?.user.firstName)
+                print("Hire date is: \(self?.user.hireDate)")
                 print(self?.user.homeSort)
             }
         }

@@ -24,12 +24,10 @@ class ExtraWorkViewController: UIViewController, UIPickerViewDataSource, UIPicke
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
-     
-        
         super.viewDidLoad()
+        print(user?.hireDate)
         self.sortPIckerView.dataSource = self
         self.sortPIckerView.delegate = self
-        
     }
     
     
@@ -46,7 +44,8 @@ class ExtraWorkViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        sortPicker = pickerDataSource[row] as String
+        var selectedValue = pickerDataSource[pickerView.selectedRow(inComponent: 0)]
+        sortPicker = selectedValue
         print(sortPicker)
     }
     
@@ -57,10 +56,13 @@ class ExtraWorkViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     @IBOutlet weak var extraWorkDatePicker: UIDatePicker!
     
-    @IBOutlet weak var extraWorkRequestedTextField: UITextField!
+    
+    @IBOutlet weak var extraWorkTextField: UITextField!
     
     
     //MARK: - Actions
+    
+    
     
     
     
@@ -69,7 +71,10 @@ class ExtraWorkViewController: UIViewController, UIPickerViewDataSource, UIPicke
         dateFormatter.dateFormat = "MM/dd/yyyy"
         let stringFromDate: String = dateFormatter.string(from: self.extraWorkDatePicker.date)
         datePicker = stringFromDate
+        print(extraWorkDatePicker.date)
     }
+    
+    
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
         extraWorkAC()
@@ -100,10 +105,10 @@ class ExtraWorkViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     func extraWorkAC() {
         guard let user = user else {return}
-        
         let alertController = UIAlertController(title: "Please Confirm Extra Work", message: "You are signing up for extra work on \(datePicker) at \(sortPicker)", preferredStyle: .alert)
         let doneAction = UIAlertAction(title: "Confirm", style: .default) { [self] (_) in
-            workRequested = extraWorkRequestedTextField.text ?? "All"
+            
+            workRequested = extraWorkTextField.text ?? "All"
             let employeeID = user.employeeID
             let extraWorkDate = datePicker
             let extraWorkSort = sortPicker

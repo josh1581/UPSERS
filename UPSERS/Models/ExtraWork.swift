@@ -11,7 +11,6 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
  
 struct ExtraWork: Identifiable, Codable {
-      
     @DocumentID public var id: String?
     var employeeID: Int
     var extraWorkDate: String
@@ -33,7 +32,6 @@ struct ExtraWork: Identifiable, Codable {
         case lastName
         case phoneNumber
         case workRequested
-        
     }
     
 }

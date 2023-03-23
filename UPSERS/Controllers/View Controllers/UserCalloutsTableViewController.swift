@@ -20,7 +20,7 @@ class UserCalloutsTableViewController: UITableViewController {
     var callOuts: [CallOut] = []
     let db = Firestore.firestore()
     
-  //MARK: - Lifecycle
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         guard let user = user else {return}
@@ -32,9 +32,7 @@ class UserCalloutsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.callOuts.count)
         return self.callOuts.count
     }
     
@@ -45,7 +43,6 @@ class UserCalloutsTableViewController: UITableViewController {
         cell?.callOut = callOut
         return cell ?? UITableViewCell()
     }
-    
     
     
     //MARK: - Functions
@@ -62,25 +59,15 @@ class UserCalloutsTableViewController: UITableViewController {
                 }
                 self.callOuts = documents.compactMap { queryDocumentSnapshot -> CallOut? in
                     return try? queryDocumentSnapshot.data(as: CallOut.self)
-                   
+                    
                 }
                 print(self.callOuts)
                 print(self.callOuts.count)
                 self.tableView.reloadData()
             }
-        }        
+        }
     }
     
     
-   
-    // MARK: - Navigation
-    
-    /*
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }// end of class

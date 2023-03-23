@@ -30,7 +30,7 @@ class UserExtraWorkTableViewCell: UITableViewCell {
     func updateViews() {
         guard let extraWork = extraWork else {return}
         extraWorkDateLabel.text = extraWork.extraWorkDate
-        extraWorkDateLabel.text = extraWork.extraWorkSort
+        extraWorkSortLabel.text = extraWork.extraWorkSort
     }
 
 }//end of class

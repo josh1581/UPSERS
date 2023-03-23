@@ -44,29 +44,8 @@ class UserExtraWorkTableViewController: UITableViewController {
         
     }
     
+       //MARK: - Functions
     
-    
-    
-    //MARK: - Functions
-    
-    func fetchExtraWork(employeeID: Int) async {
-        guard let user = user else {return}
-        db.collection("corporate").document(user.workLocation).collection("extraWork").whereField("employeeID", isEqualTo: user.employeeID).addSnapshotListener { querySnapshot, error in
-            if let error = error {
-                print("Error getting documents: \(error)")
-                
-            } else {
-                guard let documents = querySnapshot?.documents else {
-                    print("No documents.")
-                    return
-                }
-                self.extraWorks = documents.compactMap { queryDocumentSnapshot -> ExtraWork? in
-                    return try? queryDocumentSnapshot.data(as: ExtraWork.self)
-                }
-            }
-        }
-    }
-    /*
     func fetchExtraWork(employeeID: Int) async {
         guard let user = user else {return}
         db.collection("corporate").document(user.workLocation).collection("extraWork").whereField("employeeID", isEqualTo: user.employeeID).addSnapshotListener { querySnapshot, error in
@@ -90,15 +69,6 @@ class UserExtraWorkTableViewController: UITableViewController {
         }
     }
     
-   */
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    
+  
     
 }//end of class
